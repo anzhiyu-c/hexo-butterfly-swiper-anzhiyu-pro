@@ -8,7 +8,7 @@
 
 1. 安装插件,在博客根目录`[Blogroot]`下打开终端，运行以下指令：
   ```bash
-  npm install https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro --save
+  npm install hexo-butterfly-swiper-anzhiyu-pro --save
   ```
 
 2. 添加配置信息，以下为写法示例
