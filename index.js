@@ -27,7 +27,7 @@ hexo.extend.filter.register('after_generate', function () {
   }
   // 对top_group_list进行处理，使其按照index大小进行排序
   function sortNumberGroupList(a, b) {
-    return a.top_group_list - b.top_group_list
+    return a.top_group_index - b.top_group_index
   }
   swiper_list = swiper_list.sort(sortNumber);
   top_group_list = top_group_list.sort(sortNumberGroupList)

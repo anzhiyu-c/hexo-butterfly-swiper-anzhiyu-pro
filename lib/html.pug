@@ -66,6 +66,9 @@
                   img.post_bg(alt=item.title, src=item.cover, onerror=`this.src=` + error_img + `; this.onerror = null;`)
               .top-group-info
                 a.article-title(onclick=`pjax.loadUrl("` + item.path + `");` href='javascript:void(0);'    alt='', title=item.title, data-pjax-state)=item.title
+          .top-group-list-none
+          .top-group-list-none
+          .top-group-list-none
     else
       #topGroup
         .topGroup

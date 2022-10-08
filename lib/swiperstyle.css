@@ -8,6 +8,15 @@
   border-radius: 12px;
 }
 div#swiper_container {
+  transition: .3s;
+}
+#swiper_container {
+  overflow: hidden;
+}
+div.swiper_container_card {
+  margin: 1rem auto 0;
+}
+div#swiper_container {
   background:rgba(255, 255, 255, 0);
   width: 100%;
   padding: 0;
@@ -598,4 +607,8 @@ span.top-group-text {
 
 .topGroup .top-group-list-item:hover .article-title {
   color: var(--anzhiyu-theme);
+}
+
+.top-group-list-none {
+  width: calc(100% / 4 - 5px);
 }
