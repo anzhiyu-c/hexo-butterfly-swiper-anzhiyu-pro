@@ -29,8 +29,8 @@
         if pjaxenable
           each item in swiper_list
             .blog-slider__item.swiper-slide(style='width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;')
-              a.blog-slider__img(onclick=`pjax.loadUrl("` + item.path + `");` href='javascript:void(0);'    alt='')
-                img(width='48' height='48'  src=item.cover alt='' onerror=`this.src=` + error_img + `; this.onerror = null;`)
+              a.blog-slider__img(onclick=`pjax.loadUrl("` + item.path + `");` href='javascript:void(0);'    title=item.title)
+                img(width='48' height='48'  src=item.cover alt='图片' onerror=`this.src=` + error_img + `; this.onerror = null;`)
               .blog-slider__content
                 if (timemode === 'updated' )
                   span.blog-slider__code= item.updated.format('YYYY-MM-DD')
@@ -42,8 +42,8 @@
         else
           each item in swiper_list
             .blog-slider__item.swiper-slide(style='width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;')
-              a.blog-slider__img(href=item.path  alt='')
-                img(width='48' height='48'  src=item.cover alt='' onerror=`this.src=` + error_img + `; this.onerror = null;`)
+              a.blog-slider__img(href=item.path title=item.title)
+                img(width='48' height='48'  src=item.cover onerror=`this.src=` + error_img + `; this.onerror = null;` alt='图片')
               .blog-slider__content
                 if (timemode === 'updated' )
                   span.blog-slider__code= item.updated.format('YYYY-MM-DD')
@@ -61,7 +61,7 @@
           each item in top_group_list
             .top-group-list-item
               .post_cover.left_radius
-                a(onclick=`pjax.loadUrl("` + item.path + `");` href='javascript:void(0);'    alt='', title=item.title, data-pjax-state=true)
+                a(onclick=`pjax.loadUrl("` + item.path + `");` href='javascript:void(0);' alt='', title=item.title, data-pjax-state=true)
                   span.top-group-text 荐
                   img.post_bg(alt=item.title, src=item.cover, onerror=`this.src=` + error_img + `; this.onerror = null;`)
               .top-group-info
